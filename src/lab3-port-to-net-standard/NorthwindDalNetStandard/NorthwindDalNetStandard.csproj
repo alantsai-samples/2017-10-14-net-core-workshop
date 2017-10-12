@@ -10,4 +10,8 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NQuery" Version="0.9.5-beta" />
+  </ItemGroup>
+
 </Project>
