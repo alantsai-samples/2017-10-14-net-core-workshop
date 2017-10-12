@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FDD", "FDD\FDD.csproj", "{3AB25E1E-A5C0-4CB5-8E95-7CE57910BEF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FDD", "FDD\FDD.csproj", "{3AB25E1E-A5C0-4CB5-8E95-7CE57910BEF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,5 +21,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {661A1798-DECC-4F73-BA42-C1B8AB36C81F}
+	EndGlobalSection
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = 661a1798-decc-4f73-ba42-c1b8ab36c81f
 	EndGlobalSection
 EndGlobal
