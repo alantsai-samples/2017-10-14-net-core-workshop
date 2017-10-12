@@ -1,4 +1,4 @@
-# 參與 mhat-common-boilerplate-repo
+# 參與 2017-10-14-net-core-workshop
 
 首先，感謝您對於參與貢獻有興趣。這份文件將會說明如何能夠參與到貢獻。
 
@@ -6,7 +6,7 @@
 
 ## 發現bug或者想提建議
 
-如果您在這個專案裡面找到任何bug或者想要針對任意地方提出建議/意見，歡迎透過[開issue](https://github.com/alantsai/mhat-common-boilerplate-repo/issues/new) 或者 可以在 [gitter](https://gitter.im/alantsai/mhat-common-boilerplate-repo?utm_source=share-link&utm_medium=link&utm_campaign=share-link)上面發問。
+如果您在這個專案裡面找到任何bug或者想要針對任意地方提出建議/意見，歡迎透過[開issue](https://github.com/alantsai-samples/2017-10-14-net-core-workshop/issues/new) 或者 可以在 [gitter](https://gitter.im/alantsai-samples/2017-10-14-net-core-workshop?utm_source=share-link&utm_medium=link&utm_campaign=share-link)上面發問。
 
 ## 如何開始修改
 
@@ -34,10 +34,3 @@
 如果您對pull request不熟悉，可以參考以下資訊（英文）
 
 **Working on your first Pull Request?** You can learn how from this *free* series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
-
-### Roadmap
-
-對於這個專案目前構想大約有2個階段
-
-1. 把需要的檔案和內容列出來，並且提供以這個專案為例子作為一個範例
-2. 用建立template的方式讓產生這個結果變得簡單，目前想法是透過 `yeoman` 和 `dotnet new` 的兩個templateengine來做
