@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NQuery;
 
 namespace LegacyApplication.View
 {
@@ -11,27 +12,23 @@ namespace LegacyApplication.View
     {
         public static string GetEmployeeFromCountry(string filterCountry = "UK")
         {
-            var sb = new StringBuilder();
             DataSet dataSet = new DataSet();
             dataSet.ReadXml("northwind.xml");
 
-            DataTable employeeTable = dataSet.Tables["Employees"];
+            var dataContext = new DataContext();
+            dataContext.AddTablesAndRelations(dataSet);
 
-            foreach (DataRow row in employeeTable.Rows)
-            {
-                var firstName = Convert.ToString(row["FirstName"]);
-                var lastName = Convert.ToString(row["LastName"]);
-                var country = Convert.ToString(row["Country"]);
+            var sql = @"
+                SELECT  e.FirstName + ' ' + e.LastName
+                FROM    Employees e
+                WHERE   e.Country = '" + filterCountry + "'";
 
-                if (country.ToLower() != filterCountry.ToLower())
-                {
-                    continue;
-                }
+            var query = new Query(sql, dataContext);
+            var results = query.ExecuteDataTable();
+            var values = results.Rows.Cast<DataRow>().Select(r => (string)r[0]);
+            var result = string.Join(Environment.NewLine, values);
 
-                sb.AppendLine($"{firstName} {lastName}");
-            }
-
-            return sb.ToString();
+            return result;
         }
     }
 }
